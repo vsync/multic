@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Multiplayer prototype</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/public/css/main.css"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/public/js/gl-matrix.js"></script>
+    <script src="/public/js/client.js"></script>
+    <script src="/public/js/renderer.js"></script>
+    <script src="/public/js/input.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <canvas id="surface" width="900" height="900" onmousedown="input.onMouseDown(event)" onmousemove="input.onMouseMove(event)" onmouseup="input.onMouseUp(event)" onmouseout="input.onMouseOut(event)" onwheel="input.onWheel(event)"></canvas>
+    </div>
+
+    <!-- Loader -->
+    <script>
+      client.init();
+      renderer.load();
+    </script>
+  </body>
+
+</html>
